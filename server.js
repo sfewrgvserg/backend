@@ -18,6 +18,12 @@ app.use(cors());
 
 connected();
 
+app.get("/",(res,req)=>{
+  try{
+    res.json("hello")
+  }catch(err){console.error(err.message)}
+})
+
 app.get("/api/products", async (req, res) => {
   try {
     const { limit, category } = req.query;
