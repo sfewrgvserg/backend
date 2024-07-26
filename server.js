@@ -18,7 +18,7 @@ app.use(cors());
 
 connected();
 
-app.get("/",(res,req)=>{
+app.get("/",(req,res)=>{
   try{
     res.json("hello")
   }catch(err){console.error(err.message)}
